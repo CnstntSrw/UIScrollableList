@@ -10,5 +10,10 @@ public class ContentBase
     {
         contentView.SetPrice(Price);
         contentView.SetNumber(index);
+        contentView.SetContent(this);
+    }
+    public virtual int GetPrice()
+    {
+        return Price;
     }
 }

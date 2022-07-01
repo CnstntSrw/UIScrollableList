@@ -8,7 +8,7 @@ public class ProductItem : MonoBehaviour
 {
     public event Action<ProductItem> OnTryToBuy;
     [SerializeField]
-    private Transform _Parent;
+    protected Transform _Parent;
     [SerializeField]
     private TextMeshProUGUI _Price;
     [SerializeField]
@@ -21,6 +21,17 @@ public class ProductItem : MonoBehaviour
     private Color _Even;
     [SerializeField]
     private Color _Odd;
+
+    private ContentBase _Content;
+
+    public void SetContent(ContentBase content)
+    {
+        _Content = content;
+    }
+    public ContentBase GetContent()
+    {
+        return _Content;
+    }
     public void ApplySprites(List<Sprite> spriteContents)
     {
         foreach (var sprite in spriteContents)
@@ -37,6 +48,12 @@ public class ProductItem : MonoBehaviour
             instance.GetComponent<TextMeshProUGUI>().text = stringContent;
         }
     }
+    public void ApplyMoney(int intContent)
+    {
+        var _Moneytext = Instantiate(Resources.Load("TextPrefab") as GameObject, _Parent).GetComponent<TextMeshProUGUI>();
+        _Moneytext.text = intContent.ToString() + "$";
+    }
+
     public void SetPrice(int price)
     {
         if (price == 0)
@@ -56,13 +73,14 @@ public class ProductItem : MonoBehaviour
     {
         OnTryToBuy?.Invoke(this);
     }
-    public int GetPrice()
+    public virtual int GetPrice()
     {
-        if (int.TryParse(_Price.text.Replace("$", String.Empty), out int result))
-        {
-            return result;
-        }
-        return 0;
+        //if (int.TryParse(_Price.text.Replace("$", String.Empty), out int result))
+        //{
+        //    return result;
+        //}
+        //return 0;
+        return _Content.GetPrice();
     }
 
     private void ChangeColor(int index)

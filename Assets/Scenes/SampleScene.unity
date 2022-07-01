@@ -723,9 +723,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4562503062559450667, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503062559450667, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503062559450667, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503062559450667, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503063011741966, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503063011741966, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4562503063294339215, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
       propertyPath: MessageSystem
       value: 
       objectReference: {fileID: 2105198139}
+    - target: {fileID: 4562503063294339215, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: Contents.Array.data[5]
+      value: Assembly-CSharp ContentMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503063294339215, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: Contents.Array.data[5].Money
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562503063294339215, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
+      propertyPath: Contents.Array.data[5].Price
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24b6ff3cdc40a9d4aa49013286ed24f7, type: 3}
